@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Mehedi Hasan Rabbi - Software QA Engineer | Manual Tester | Automation Tester. Expert in Playwright, Selenium, API Testing, and JMeter."/>
+<meta name="keywords" content="QA Engineer, Software Testing, Automation Testing, Playwright, Selenium, API Testing, JMeter, Bangladesh"/>
+<meta name="author" content="Mehedi Hasan Rabbi"/>
+<title>Mehedi Hasan Rabbi | QA Engineer & Automation Tester</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#060810;--bg2:#0c1020;--bg3:#111627;--bg4:#171d30;
+  --surface:#1a2035;--surface2:#202840;--surface3:#252f4a;
+  --blue:#4f8ef7;--blue2:#6ba3f8;--blue3:#3a7cf6;
+  --purple:#8b5cf6;--purple2:#a78bfa;
+  --cyan:#06b6d4;--cyan2:#22d3ee;
+  --green:#10b981;--pink:#ec4899;
+  --text:#e8eaf0;--text2:#9aa3b8;--text3:#5c6680;
+  --border:rgba(79,142,247,0.12);--border2:rgba(79,142,247,0.2);
+  --glow:rgba(79,142,247,0.15);
+  --grad:linear-gradient(135deg,#4f8ef7,#8b5cf6);
+  --grad2:linear-gradient(135deg,#06b6d4,#4f8ef7);
+  --r:12px;--r2:20px;
+  --font:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;overflow-x:hidden}
+::selection{background:rgba(79,142,247,0.3);color:#fff}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--blue3);border-radius:3px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(6,8,16,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all .3s}
+nav.scrolled{background:rgba(6,8,16,0.97)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--mono);font-size:1.1rem;color:var(--blue);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--purple2)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.02em;transition:color .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--grad);transition:width .3s;border-radius:2px}
+.nav-links a:hover{color:var(--blue)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--grad);color:#fff;padding:.5rem 1.25rem;border-radius:8px;font-size:.85rem;font-weight:600;text-decoration:none;letter-spacing:.02em;transition:opacity .2s,transform .2s}
+.nav-cta:hover{opacity:.85;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:72px}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:float 8s ease-in-out infinite}
+.orb1{width:600px;height:600px;background:radial-gradient(circle,rgba(79,142,247,.18),transparent 70%);top:-100px;right:-100px;animation-delay:0s}
+.orb2{width:500px;height:500px;background:radial-gradient(circle,rgba(139,92,246,.15),transparent 70%);bottom:-100px;left:-100px;animation-delay:-3s}
+.orb3{width:300px;height:300px;background:radial-gradient(circle,rgba(6,182,212,.12),transparent 70%);top:50%;left:40%;animation-delay:-5s}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,247,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,247,.04) 1px,transparent 1px);background-size:60px 60px}
+@keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
+.hero-inner{max-width:1200px;margin:0 auto;padding:0 2rem;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(79,142,247,.1);border:1px solid rgba(79,142,247,.25);color:var(--blue2);padding:.4rem 1rem;border-radius:100px;font-size:.8rem;font-family:var(--mono);font-weight:500;margin-bottom:1.5rem;animation:fadeInDown .6s ease both}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+.hero-name{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;line-height:1.1;margin-bottom:.75rem;animation:fadeInUp .7s ease .1s both}
+.hero-name .gradient{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-roles{font-family:var(--mono);font-size:1.1rem;color:var(--cyan);margin-bottom:1.5rem;min-height:2em;animation:fadeInUp .7s ease .2s both}
+.cursor{animation:blink .8s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-bio{color:var(--text2);font-size:1.05rem;line-height:1.8;margin-bottom:2.5rem;animation:fadeInUp .7s ease .3s both}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeInUp .7s ease .4s both}
+.btn-primary{background:var(--grad);color:#fff;padding:.85rem 1.75rem;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:all .3s;box-shadow:0 4px 20px rgba(79,142,247,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(79,142,247,.4)}
+.btn-outline{background:transparent;color:var(--text);padding:.85rem 1.75rem;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--border2);display:inline-flex;align-items:center;gap:.5rem;transition:all .3s}
+.btn-outline:hover{background:var(--glow);border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:2rem;margin-top:2.5rem;animation:fadeInUp .7s ease .5s both}
+.stat{text-align:center}
+.stat-num{font-size:1.8rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.stat-label{font-size:.78rem;color:var(--text3);font-family:var(--mono);margin-top:.25rem}
+.hero-right{display:flex;justify-content:center;align-items:center;animation:fadeIn 1s ease .4s both;position:relative}
+.hero-card{background:var(--surface);border:1px solid var(--border2);border-radius:24px;padding:2.5rem;width:380px;position:relative;overflow:hidden}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad)}
+.code-block{background:var(--bg2);border-radius:12px;padding:1.5rem;font-family:var(--mono);font-size:.78rem;line-height:2;border:1px solid var(--border)}
+.code-line{display:flex;gap:.75rem}
+.ln{color:var(--text3);min-width:16px}
+.kw{color:#c792ea}.fn{color:var(--cyan)}.str{color:#c3e88d}.cm{color:var(--text3)}
+.prop{color:#82aaff}.val{color:#f78c6c}.op{color:var(--text2)}
+.skills-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.tag{background:rgba(79,142,247,.1);border:1px solid rgba(79,142,247,.2);color:var(--blue2);padding:.3rem .75rem;border-radius:6px;font-size:.75rem;font-family:var(--mono);font-weight:500;transition:all .2s}
+.tag:hover{background:rgba(79,142,247,.2);transform:translateY(-1px)}
+.tag.purple{background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.2);color:var(--purple2)}
+.tag.cyan{background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.2);color:var(--cyan2)}
+.tag.green{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.2);color:var(--green)}
+
+/* SECTIONS */
+section{padding:100px 0}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section-label{font-family:var(--mono);font-size:.8rem;color:var(--blue);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem;display:flex;align-items:center;gap:.75rem}
+.section-label::before{content:'';width:24px;height:1px;background:var(--blue)}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.15;margin-bottom:1.5rem}
+.section-title span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-desc{color:var(--text2);font-size:1.05rem;max-width:600px;line-height:1.8}
+.section-center{text-align:center}
+.section-center .section-label{justify-content:center}
+.section-center .section-label::before{display:none}
+.section-center .section-desc{margin:0 auto}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);margin:0}
+
+/* ABOUT */
+#about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:center;margin-top:4rem}
+.about-img-wrap{position:relative}
+.about-img-card{background:var(--grad);border-radius:24px;padding:3px}
+.about-img-inner{background:var(--surface);border-radius:22px;padding:3rem;display:flex;flex-direction:column;align-items:center;text-align:center}
+.avatar{width:120px;height:120px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;color:#fff;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar-status{position:absolute;bottom:6px;right:6px;width:20px;height:20px;border-radius:50%;background:var(--green);border:3px solid var(--surface)}
+.about-name{font-size:1.4rem;font-weight:700;margin-bottom:.25rem}
+.about-role{color:var(--blue2);font-family:var(--mono);font-size:.85rem}
+.about-chips{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:1.5rem}
+.chip{background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:.35rem .85rem;border-radius:100px;font-size:.78rem}
+.floating-badges{position:absolute;pointer-events:none}
+.fbadge{position:absolute;background:var(--surface2);border:1px solid var(--border2);border-radius:12px;padding:.6rem 1rem;font-size:.78rem;font-family:var(--mono);display:flex;align-items:center;gap:.5rem;box-shadow:0 8px 30px rgba(0,0,0,.4);animation:float2 4s ease-in-out infinite}
+.fbadge1{top:-20px;right:-30px;animation-delay:0s}
+.fbadge2{bottom:-20px;left:-30px;animation-delay:-2s}
+@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.about-text .section-desc{max-width:none}
+.about-highlights{margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.highlight-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;transition:all .3s}
+.highlight-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.highlight-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:.75rem}
+.hi-blue{background:rgba(79,142,247,.15);color:var(--blue)}
+.hi-purple{background:rgba(139,92,246,.15);color:var(--purple)}
+.hi-cyan{background:rgba(6,182,212,.15);color:var(--cyan)}
+.hi-green{background:rgba(16,185,129,.15);color:var(--green)}
+.highlight-title{font-weight:600;font-size:.95rem;margin-bottom:.25rem}
+.highlight-desc{color:var(--text2);font-size:.82rem;line-height:1.6}
+
+/* SKILLS */
+.skills-tabs{display:flex;gap:1rem;justify-content:center;margin-bottom:3rem}
+.tab-btn{background:var(--surface);border:1px solid var(--border);color:var(--text2);padding:.6rem 1.5rem;border-radius:8px;font-size:.9rem;font-weight:500;cursor:pointer;transition:all .3s;font-family:var(--font)}
+.tab-btn.active{background:var(--grad);border-color:transparent;color:#fff}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.skill-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:1.75rem;transition:all .3s;cursor:default}
+.skill-card:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:0 10px 40px rgba(79,142,247,.08)}
+.skill-top{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+.skill-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.skill-name{font-weight:600;font-size:1rem}
+.skill-category{font-size:.75rem;color:var(--text3);font-family:var(--mono)}
+.skill-bar-wrap{background:var(--bg3);border-radius:100px;height:6px;overflow:hidden;margin-top:1rem}
+.skill-bar{height:100%;border-radius:100px;transition:width 1.2s cubic-bezier(.4,0,.2,1);background:var(--grad)}
+.skill-pct{font-family:var(--mono);font-size:.8rem;color:var(--text2);margin-top:.5rem;text-align:right}
+.tools-section{margin-top:5rem}
+.tools-title{text-align:center;font-size:1.1rem;color:var(--text2);margin-bottom:2rem}
+.tools-row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.tool-badge{display:flex;align-items:center;gap:.6rem;background:var(--surface);border:1px solid var(--border);padding:.6rem 1.25rem;border-radius:10px;font-size:.85rem;font-weight:500;transition:all .3s}
+.tool-badge:hover{border-color:var(--border2);transform:translateY(-2px);background:var(--surface2)}
+.tool-icon{font-size:1rem}
+
+/* PROJECTS */
+#projects{background:var(--bg2)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:2rem;margin-top:3rem}
+.project-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;transition:all .35s;display:flex;flex-direction:column}
+.project-card:hover{border-color:rgba(79,142,247,.35);transform:translateY(-5px);box-shadow:0 20px 60px rgba(79,142,247,.1)}
+.project-header{padding:1.75rem 1.75rem 0;position:relative}
+.project-num{font-family:var(--mono);font-size:.75rem;color:var(--text3);margin-bottom:.5rem}
+.project-icon-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.project-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.project-status{font-family:var(--mono);font-size:.7rem;padding:.3rem .75rem;border-radius:100px;font-weight:500}
+.status-done{background:rgba(16,185,129,.1);color:var(--green);border:1px solid rgba(16,185,129,.2)}
+.project-name{font-size:1.2rem;font-weight:700;margin-bottom:.75rem}
+.project-desc{color:var(--text2);font-size:.9rem;line-height:1.7}
+.project-body{padding:1.25rem 1.75rem;flex:1}
+.project-tech{margin-top:1.25rem}
+.project-tech-label{font-size:.75rem;color:var(--text3);font-family:var(--mono);margin-bottom:.5rem}
+.project-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.p-tag{background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:.25rem .6rem;border-radius:5px;font-size:.72rem;font-family:var(--mono)}
+.project-footer{padding:1.25rem 1.75rem;border-top:1px solid var(--border)}
+.qa-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.qa-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.83rem;color:var(--text2)}
+.qa-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:2px}
+
+/* TIMELINE / EXPERIENCE */
+.timeline{position:relative;margin-top:3rem;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--blue),var(--purple),transparent)}
+.timeline-item{position:relative;padding-left:2.5rem;padding-bottom:3rem}
+.timeline-dot{position:absolute;left:-2.25rem;top:.25rem;width:18px;height:18px;border-radius:50%;background:var(--grad);box-shadow:0 0 0 4px rgba(79,142,247,.15)}
+.timeline-date{font-family:var(--mono);font-size:.78rem;color:var(--blue2);margin-bottom:.5rem}
+.timeline-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:all .3s}
+.timeline-card:hover{border-color:var(--border2)}
+.timeline-role{font-size:1.1rem;font-weight:700;margin-bottom:.25rem}
+.timeline-company{color:var(--text2);font-size:.9rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.timeline-items{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.timeline-items li{display:flex;align-items:flex-start;gap:.75rem;font-size:.88rem;color:var(--text2)}
+.timeline-items li::before{content:'▸';color:var(--blue);flex-shrink:0;margin-top:2px}
+
+/* WORKFLOW */
+#workflow{background:var(--bg2)}
+.workflow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:3rem}
+.workflow-step{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:2rem 1.5rem;text-align:center;position:relative;transition:all .3s}
+.workflow-step:hover{border-color:var(--border2);transform:translateY(-3px)}
+.workflow-step::after{content:'→';position:absolute;right:-1.2rem;top:50%;transform:translateY(-50%);color:var(--text3);font-size:1.2rem;z-index:1}
+.workflow-step:last-child::after{display:none}
+.workflow-num{font-family:var(--mono);font-size:.75rem;color:var(--text3);margin-bottom:1rem}
+.workflow-icon{font-size:2rem;margin-bottom:1rem;display:block}
+.workflow-name{font-weight:700;font-size:.95rem;margin-bottom:.5rem}
+.workflow-desc{color:var(--text2);font-size:.8rem;line-height:1.6}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:2rem;transition:all .35s;cursor:default;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .35s}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 15px 50px rgba(79,142,247,.1)}
+.service-icon{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.5rem}
+.service-title{font-size:1.1rem;font-weight:700;margin-bottom:.75rem}
+.service-desc{color:var(--text2);font-size:.88rem;line-height:1.7}
+.service-list{list-style:none;margin-top:1rem;display:flex;flex-direction:column;gap:.4rem}
+.service-list li{font-size:.82rem;color:var(--text2);display:flex;align-items:center;gap:.5rem}
+.service-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);flex-shrink:0}
+
+/* CERTS */
+#certifications{background:var(--bg2)}
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+.cert-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:1.75rem;display:flex;align-items:flex-start;gap:1.25rem;transition:all .3s}
+.cert-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.cert-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.cert-body{flex:1}
+.cert-title{font-weight:700;font-size:1rem;margin-bottom:.25rem}
+.cert-issuer{color:var(--text2);font-size:.82rem;margin-bottom:.75rem}
+.cert-badge{display:inline-block;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);color:var(--green);padding:.25rem .7rem;border-radius:100px;font-size:.72rem;font-family:var(--mono)}
+
+/* TESTIMONIALS */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-top:3rem}
+.testimonial-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:2rem;position:relative;transition:all .3s}
+.testimonial-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.quote-mark{font-size:3rem;line-height:1;color:var(--blue3);font-family:Georgia,serif;margin-bottom:.75rem}
+.testimonial-text{color:var(--text2);font-size:.9rem;line-height:1.8;font-style:italic;margin-bottom:1.5rem}
+.testimonial-author{display:flex;align-items:center;gap:.75rem}
+.author-avatar{width:42px;height:42px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:#fff}
+.author-name{font-weight:600;font-size:.9rem}
+.author-role{color:var(--text3);font-size:.78rem}
+
+/* CONTACT */
+#contact{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;margin-top:4rem}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem}
+.contact-item{display:flex;align-items:center;gap:1rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;transition:all .3s;text-decoration:none;color:inherit}
+.contact-item:hover{border-color:var(--border2);transform:translateX(4px)}
+.contact-item-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-item-label{font-size:.78rem;color:var(--text3);font-family:var(--mono);margin-bottom:.15rem}
+.contact-item-val{font-size:.92rem;font-weight:500}
+.contact-social{display:flex;gap:1rem;margin-top:1rem}
+.social-btn{width:44px;height:44px;border-radius:10px;border:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;color:var(--text2);font-size:1rem;text-decoration:none;transition:all .3s}
+.social-btn:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.contact-form{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.25rem}
+.form-group label{font-size:.85rem;font-weight:500;color:var(--text2)}
+.form-group input,.form-group textarea,.form-group select{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:.75rem 1rem;color:var(--text);font-size:.9rem;font-family:var(--font);outline:none;transition:border-color .2s;resize:none}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--blue)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--text3)}
+.btn-submit{width:100%;background:var(--grad);color:#fff;padding:1rem;border:none;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;font-family:var(--font);transition:all .3s;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.btn-submit:hover{opacity:.9;transform:translateY(-1px)}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 0}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-copy{color:var(--text3);font-size:.85rem}
+.footer-copy span{color:var(--blue)}
+.back-top{background:var(--surface);border:1px solid var(--border);color:var(--text2);width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .3s;font-size:.9rem}
+.back-top:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;transition:opacity .5s,visibility .5s}
+#loader.hidden{opacity:0;visibility:hidden}
+.loader-logo{font-family:var(--mono);font-size:1.5rem;color:var(--blue);animation:fadeInUp .5s ease}
+.loader-bar-wrap{width:200px;height:2px;background:var(--border);border-radius:2px;overflow:hidden}
+.loader-bar{height:100%;background:var(--grad);border-radius:2px;animation:load 1.5s ease forwards}
+@keyframes load{0%{width:0}100%{width:100%}}
+.loader-text{font-family:var(--mono);font-size:.78rem;color:var(--text3)}
+
+/* ANIMATIONS */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* MOBILE NAV */
+.nav-mobile{display:none;position:fixed;inset:0;top:72px;background:rgba(6,8,16,.98);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.nav-mobile.open{display:flex}
+.nav-mobile a{color:var(--text);font-size:1.2rem;text-decoration:none;font-weight:500}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem;padding-top:2rem}
+  .hero-right{display:none}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .contact-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .projects-grid{grid-template-columns:1fr}
+  .about-highlights{grid-template-columns:1fr}
+  .workflow-step::after{display:none}
+}
+@media(max-width:600px){
+  section{padding:70px 0}
+  .hero-ctas{flex-direction:column}
+  .btn-primary,.btn-outline{text-align:center;justify-content:center}
+  .hero-stats{gap:1rem}
+  .workflow-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">&lt;MHR/&gt;</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-text">Initializing QA Environment...</div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">&lt;<span>MHR</span>/&gt;</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:mehedi@email.com" class="nav-cta">Hire Me</a>
+    <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <a href="#about" onclick="toggleMobile()">About</a>
+  <a href="#skills" onclick="toggleMobile()">Skills</a>
+  <a href="#projects" onclick="toggleMobile()">Projects</a>
+  <a href="#experience" onclick="toggleMobile()">Experience</a>
+  <a href="#services" onclick="toggleMobile()">Services</a>
+  <a href="#certifications" onclick="toggleMobile()">Certifications</a>
+  <a href="#contact" onclick="toggleMobile()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="grid-lines"></div>
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-orb orb3"></div>
+  </div>
+  <div class="hero-inner container" style="max-width:1200px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+    <div>
+      <div class="hero-badge"><i class="fa-solid fa-circle-dot"></i> Available for Opportunities</div>
+      <h1 class="hero-name">Mehedi Hasan<br><span class="gradient">Rabbi</span></h1>
+      <div class="hero-roles"><span id="typed-text"></span><span class="cursor">|</span></div>
+      <p class="hero-bio">Passionate Software QA Engineer specializing in Manual & Automation Testing. I ensure software quality through meticulous test planning, execution, and bug detection — building reliable systems that users can trust.</p>
+      <div class="hero-ctas">
+        <a href="mailto:mehedihasan@email.com" class="btn-primary"><i class="fa-solid fa-briefcase"></i> Hire Me</a>
+        <a href="#" class="btn-outline"><i class="fa-solid fa-download"></i> Download CV</a>
+        <a href="#contact" class="btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Projects</div></div>
+        <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Test Cases</div></div>
+        <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Tools</div></div>
+        <div class="stat"><div class="stat-num">0</div><div class="stat-label">Bugs Shipped</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div style="position:relative">
+        <div class="hero-card">
+          <div class="code-block">
+            <div class="code-line"><span class="ln">1</span><span class="cm">// QA Engineer Profile</span></div>
+            <div class="code-line"><span class="ln">2</span><span class="kw">const</span> <span class="fn">engineer</span> <span class="op">=</span> {</div>
+            <div class="code-line"><span class="ln">3</span>&nbsp;&nbsp;<span class="prop">name</span>: <span class="str">"Mehedi Hasan Rabbi"</span>,</div>
+            <div class="code-line"><span class="ln">4</span>&nbsp;&nbsp;<span class="prop">role</span>: <span class="str">"QA Engineer"</span>,</div>
+            <div class="code-line"><span class="ln">5</span>&nbsp;&nbsp;<span class="prop">skills</span>: [<span class="str">"Manual"</span>, <span class="str">"Auto"</span>],</div>
+            <div class="code-line"><span class="ln">6</span>&nbsp;&nbsp;<span class="prop">tools</span>: [<span class="str">"Playwright"</span>, <span class="str">"Selenium"</span>],</div>
+            <div class="code-line"><span class="ln">7</span>&nbsp;&nbsp;<span class="prop">status</span>: <span class="val">true</span> <span class="cm">// available</span></div>
+            <div class="code-line"><span class="ln">8</span>};</div>
+          </div>
+          <div class="skills-tags">
+            <span class="tag">Manual Testing</span>
+            <span class="tag purple">Playwright</span>
+            <span class="tag cyan">API Testing</span>
+            <span class="tag green">Selenium</span>
+            <span class="tag">JMeter</span>
+            <span class="tag purple">Bug Reporting</span>
+          </div>
+        </div>
+        <div class="fbadge fbadge1"><span style="color:var(--green)">●</span> 5 Bugs Found Today</div>
+        <div class="fbadge fbadge2"><i class="fa-solid fa-check" style="color:var(--cyan)"></i> All Tests Passing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-card">
+          <div class="about-img-inner">
+            <div class="avatar"><img src="profile.png" alt="Mehedi Hasan Rabbi"><div class="avatar-status"></div></div>
+            <div class="about-name">Mehedi Hasan Rabbi</div>
+            <div class="about-role">Software QA Engineer</div>
+            <div class="about-chips">
+              <span class="chip">📍 Bangladesh</span>
+              <span class="chip">💼 Open to Work</span>
+              <span class="chip">🎓 CS Graduate</span>
+            </div>
+          </div>
+        </div>
+        <div class="fbadge fbadge1" style="position:absolute"><i class="fa-brands fa-chrome" style="color:var(--blue)"></i> Playwright Certified</div>
+        <div class="fbadge fbadge2" style="position:absolute"><i class="fa-solid fa-bug" style="color:var(--purple2)"></i> 200+ Bugs Reported</div>
+      </div>
+      <div class="about-text reveal">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Ensuring <span>Quality</span> at Every Step</h2>
+        <p class="section-desc">I'm a dedicated Software QA Engineer passionate about delivering bug-free software experiences. With hands-on experience across manual testing, automation frameworks, and API testing, I've contributed to real-world projects during my internship and professional QA journey.</p>
+        <p class="section-desc" style="margin-top:1rem">My goal is to become a leading automation expert, leveraging tools like Playwright and Selenium to build robust test suites that catch critical bugs before they reach production.</p>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <div class="highlight-icon hi-blue"><i class="fa-solid fa-clipboard-check"></i></div>
+            <div class="highlight-title">Manual Testing</div>
+            <div class="highlight-desc">Thorough exploratory and regression testing across complex enterprise systems.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon hi-purple"><i class="fa-solid fa-robot"></i></div>
+            <div class="highlight-title">Test Automation</div>
+            <div class="highlight-desc">Building scalable automation suites with Playwright & Selenium WebDriver.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon hi-cyan"><i class="fa-solid fa-plug"></i></div>
+            <div class="highlight-title">API Testing</div>
+            <div class="highlight-desc">Validating RESTful APIs using Postman and automated API test frameworks.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon hi-green"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="highlight-title">Performance Testing</div>
+            <div class="highlight-desc">Load and stress testing with JMeter to ensure scalability under pressure.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="section-label">Technical Expertise</div>
+      <h2 class="section-title">My <span>Skills</span> & Tools</h2>
+      <p class="section-desc">A comprehensive toolkit for delivering quality software through manual and automated testing methodologies.</p>
+    </div>
+    <div class="skills-tabs" style="margin-top:2.5rem">
+      <button class="tab-btn active" onclick="filterSkills('all',this)">All Skills</button>
+      <button class="tab-btn" onclick="filterSkills('manual',this)">Manual Testing</button>
+      <button class="tab-btn" onclick="filterSkills('automation',this)">Automation</button>
+      <button class="tab-btn" onclick="filterSkills('tools',this)">Tools</button>
+    </div>
+    <div class="skills-grid" id="skills-grid">
+      <div class="skill-card reveal" data-cat="manual">
+        <div class="skill-top">
+          <div class="skill-icon" style="background:rgba(79,142,247,.15);color:var(--blue)"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div><div class="skill-name">Manual Testing</div><div class="skill-category">Testing Fundamentals</div></div>
+        </div>
+        <p style="color:var(--text2);font-size:.85rem">Functional, regression, smoke, exploratory, and UAT testing for web applications.</p>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="90" style="width:0"></div></div>
+        <div class="skill-pct">90%</div>
+      </div>
+      <div class="skill-card reveal" data-cat="manual">
+        <div class="skill-top">
+          <div class="skill-icon" style="background:rgba(16,185,129,.15);color:var(--green)"><i class="fa-solid fa-file-lines"></i></div>
+          <div><div class="skill-name">Test Case Writing</div><div class="skill-category">Documentation</div></div>
+        </div>
+        <p style="color:var(--text2);font-size:.85rem">Detailed test case design covering positive, negative and edge cases.</p>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="88" style="width:0;background:linear-gradient(135deg,#10b981,#059669)"></div></div>
+        <div class="skill-pct">88%</div>
+      </div>
+      <div class="skill-card reveal" data-cat="manual">
+        <div class="skill-top">
+          <div class="skill-icon" style="background:rgba(236,72,153,.15);color:var(--pink)"><i class="fa-solid fa-bug"></i></div>
+          <div><div class="skill-name">Bug Reporting</div><div class="skill-category">Defect Management</div></div>
+        </div>
+        <p style="color:var(--text2);font-size:.85rem">Clear, reproducible bug reports with severity classification and evidence.</p>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="92" style="width:0;background:linear-gradient(135deg,#ec4899,#db2777)"></div></div>
+        <div class="skill-pct">92%</div>
+      </div>
+      <div class="skill-card reveal" data-cat="automation">
+        <div class="skill-top">
+          <div class="skill-icon" style="background:rgba(139,92,246,.15);color:var(--purple)"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div><div class="skill-name">Playwright</div><div class="skill-category">Automation Framework</div></div>
+        </div>
+        <p style="color:var(--text2);font-size:.85rem">End-to-end browser automation with TypeScript/JavaScript for modern web apps.</p>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="80" style="width:0;background:linear-gradient(135deg,#8b5cf6,#7c3aed)"></div></div>
+        <div class="skill-pct">80%</div>
+      </div>
+      <div class="skill-card reveal" data-cat="automation">
+        <div class="skill-top">
+          <div class="skill-icon" style="background:rgba(6,182,212,.15);color:var(--cyan)"><i class="fa-solid fa-spider"></i></div>
+          <div><div class="skill-name">Selenium WebDriver</div><div class="skill-category">Automation Framework</div></div>
+        </div>
+        <p style="color:var(--text2);font-size:.85rem">Cross-browser automated testing with Selenium and Java/Python.</p>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="75" style="width:0;background:linear-gradient(135deg,#06b6d4,#0891b2)"></div></div>
+        <div class="skill-pct">75%</div>
+      </div>
+      <div class="skill-card reveal" data-cat="tools">
+        <div class="skill-top">
+          <div class="skill-icon" style="background:rgba(245,158,11,.15);color:#f59e0b"><i class="fa-solid fa-bolt"></i></div>
+          <div><div class="skill-name">API Testing</div><div class="skill-category">Postman / REST</div></div>
+        </div>
+        <p style="color:var(--text2);font-size:.85rem">RESTful API validation, authentication testing, and response schema verification.</p>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="85" style="width:0;background:linear-gradient(135deg,#f59e0b,#d97706)"></div></div>
+        <div class="skill-pct">85%</div>
+      </div>
+      <div class="skill-card reveal" data-cat="tools">
+        <div class="skill-top">
+          <div class="skill-icon" style="background:rgba(239,68,68,.15);color:#ef4444"><i class="fa-solid fa-gauge-high"></i></div>
+          <div><div class="skill-name">JMeter</div><div class="skill-category">Performance Testing</div></div>
+        </div>
+        <p style="color:var(--text2);font-size:.85rem">Load testing, stress testing and performance metrics analysis.</p>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="70" style="width:0;background:linear-gradient(135deg,#ef4444,#dc2626)"></div></div>
+        <div class="skill-pct">70%</div>
+      </div>
+      <div class="skill-card reveal" data-cat="tools">
+        <div class="skill-top">
+          <div class="skill-icon" style="background:rgba(16,185,129,.15);color:var(--green)"><i class="fa-solid fa-database"></i></div>
+          <div><div class="skill-name">SQL Basics</div><div class="skill-category">Data Validation</div></div>
+        </div>
+        <p style="color:var(--text2);font-size:.85rem">Database query validation and data integrity testing using SQL.</p>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="65" style="width:0;background:linear-gradient(135deg,#10b981,#059669)"></div></div>
+        <div class="skill-pct">65%</div>
+      </div>
+      <div class="skill-card reveal" data-cat="manual">
+        <div class="skill-top">
+          <div class="skill-icon" style="background:rgba(79,142,247,.15);color:var(--blue)"><i class="fa-solid fa-rotate"></i></div>
+          <div><div class="skill-name">Regression Testing</div><div class="skill-category">Test Execution</div></div>
+        </div>
+        <p style="color:var(--text2);font-size:.85rem">Systematic regression suites to validate code changes don't break existing functionality.</p>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="87" style="width:0"></div></div>
+        <div class="skill-pct">87%</div>
+      </div>
+    </div>
+    <div class="tools-section reveal">
+      <div class="tools-title">Testing Tools & Technologies</div>
+      <div class="tools-row">
+        <div class="tool-badge"><span class="tool-icon">🎭</span> Playwright</div>
+        <div class="tool-badge"><span class="tool-icon">🕷️</span> Selenium</div>
+        <div class="tool-badge"><span class="tool-icon">⚡</span> Postman</div>
+        <div class="tool-badge"><span class="tool-icon">📊</span> JMeter</div>
+        <div class="tool-badge"><span class="tool-icon">🐛</span> JIRA</div>
+        <div class="tool-badge"><span class="tool-icon">📋</span> TestRail</div>
+        <div class="tool-badge"><span class="tool-icon">🗄️</span> MySQL</div>
+        <div class="tool-badge"><span class="tool-icon">🔧</span> Git/GitHub</div>
+        <div class="tool-badge"><span class="tool-icon">🖥️</span> VS Code</div>
+        <div class="tool-badge"><span class="tool-icon">📝</span> Excel/Sheets</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title">Projects I've <span>Tested</span></h2>
+      <p class="section-desc">Real-world projects where I ensured quality, wrote test cases, executed testing strategies, and reported defects.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-num">Project #01</div>
+          <div class="project-icon-row">
+            <div class="project-icon" style="background:rgba(79,142,247,.15)">🏛️</div>
+            <span class="project-status status-done">✓ Completed</span>
+          </div>
+          <div class="project-name">BNCC Management System</div>
+          <div class="project-desc">A comprehensive management system for Bangladesh National Cadet Corps operations, managing cadets, officers, and organizational workflows.</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <div class="project-tech-label">Tech Stack Tested:</div>
+            <div class="project-tags">
+              <span class="p-tag">Web App</span><span class="p-tag">REST API</span><span class="p-tag">MySQL</span><span class="p-tag">Auth Module</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="project-tech-label" style="margin-bottom:.75rem">QA Responsibilities:</div>
+          <ul class="qa-list">
+            <li>Wrote 80+ test cases covering all functional modules</li>
+            <li>Performed regression and smoke testing for each release</li>
+            <li>API endpoint validation using Postman</li>
+            <li>Reported and tracked 30+ bugs in JIRA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-num">Project #02</div>
+          <div class="project-icon-row">
+            <div class="project-icon" style="background:rgba(139,92,246,.15)">🎓</div>
+            <span class="project-status status-done">✓ Completed</span>
+          </div>
+          <div class="project-name">IUMS – Institute/University Management System</div>
+          <div class="project-desc">A full-featured university management platform handling student records, course management, faculty workflows, and administrative operations.</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <div class="project-tech-label">Tech Stack Tested:</div>
+            <div class="project-tags">
+              <span class="p-tag">Web App</span><span class="p-tag">Playwright</span><span class="p-tag">REST API</span><span class="p-tag">SQL DB</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="project-tech-label" style="margin-bottom:.75rem">QA Responsibilities:</div>
+          <ul class="qa-list">
+            <li>Automated critical user journeys with Playwright</li>
+            <li>Validated student enrollment and grade systems</li>
+            <li>Cross-browser compatibility testing</li>
+            <li>Database validation for data integrity</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-num">Project #03</div>
+          <div class="project-icon-row">
+            <div class="project-icon" style="background:rgba(6,182,212,.15)">📚</div>
+            <span class="project-status status-done">✓ Completed</span>
+          </div>
+          <div class="project-name">EMS – Education Management System</div>
+          <div class="project-desc">An educational platform supporting curriculum management, student performance tracking, attendance systems, and parent communication portals.</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <div class="project-tech-label">Tech Stack Tested:</div>
+            <div class="project-tags">
+              <span class="p-tag">Web App</span><span class="p-tag">Selenium</span><span class="p-tag">API Testing</span><span class="p-tag">Performance</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="project-tech-label" style="margin-bottom:.75rem">QA Responsibilities:</div>
+          <ul class="qa-list">
+            <li>Selenium automation for attendance module</li>
+            <li>Load testing with JMeter (500 concurrent users)</li>
+            <li>End-to-end functional testing of all portals</li>
+            <li>Test plan creation and execution reporting</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-num">Project #04</div>
+          <div class="project-icon-row">
+            <div class="project-icon" style="background:rgba(16,185,129,.15)">🛒</div>
+            <span class="project-status status-done">✓ Completed</span>
+          </div>
+          <div class="project-name">POS System</div>
+          <div class="project-desc">A Point of Sale system for retail businesses featuring inventory management, sales tracking, receipt generation, and reporting dashboards.</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <div class="project-tech-label">Tech Stack Tested:</div>
+            <div class="project-tags">
+              <span class="p-tag">Desktop/Web</span><span class="p-tag">API</span><span class="p-tag">SQL</span><span class="p-tag">Payment Flow</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="project-tech-label" style="margin-bottom:.75rem">QA Responsibilities:</div>
+          <ul class="qa-list">
+            <li>Payment transaction testing with edge cases</li>
+            <li>Inventory CRUD operation validation</li>
+            <li>SQL queries to verify data accuracy</li>
+            <li>Negative testing for discount/tax calculations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-num">Project #05</div>
+          <div class="project-icon-row">
+            <div class="project-icon" style="background:rgba(245,158,11,.15)">🏫</div>
+            <span class="project-status status-done">✓ Completed</span>
+          </div>
+          <div class="project-name">School Management System</div>
+          <div class="project-desc">A complete school administration platform covering student enrollment, teacher management, timetable scheduling, exam results, and fee management.</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <div class="project-tech-label">Tech Stack Tested:</div>
+            <div class="project-tags">
+              <span class="p-tag">Web App</span><span class="p-tag">Playwright</span><span class="p-tag">Manual</span><span class="p-tag">Regression</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="project-tech-label" style="margin-bottom:.75rem">QA Responsibilities:</div>
+          <ul class="qa-list">
+            <li>Full regression suite using Playwright automation</li>
+            <li>Timetable and scheduling conflict testing</li>
+            <li>Fee collection module validation</li>
+            <li>UAT coordination with stakeholders</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WORKFLOW -->
+<section id="workflow">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="section-label">Testing Process</div>
+      <h2 class="section-title">QA Testing <span>Workflow</span></h2>
+      <p class="section-desc">My systematic approach to ensuring software quality from requirements analysis to delivery.</p>
+    </div>
+    <div class="workflow-grid">
+      <div class="workflow-step reveal">
+        <div class="workflow-num">01</div>
+        <span class="workflow-icon">📋</span>
+        <div class="workflow-name">Requirement Analysis</div>
+        <div class="workflow-desc">Review BRS/SRS documents, clarify requirements with developers and PMs.</div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="workflow-num">02</div>
+        <span class="workflow-icon">📝</span>
+        <div class="workflow-name">Test Planning</div>
+        <div class="workflow-desc">Define scope, test strategy, resources, schedule, and risk assessment.</div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="workflow-num">03</div>
+        <span class="workflow-icon">🔧</span>
+        <div class="workflow-name">Test Case Design</div>
+        <div class="workflow-desc">Write positive, negative, and edge case test scenarios with steps.</div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="workflow-num">04</div>
+        <span class="workflow-icon">▶️</span>
+        <div class="workflow-name">Test Execution</div>
+        <div class="workflow-desc">Execute manual and automated test cases, recording pass/fail results.</div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="workflow-num">05</div>
+        <span class="workflow-icon">🐛</span>
+        <div class="workflow-name">Bug Reporting</div>
+        <div class="workflow-desc">Log defects with severity, screenshots, steps to reproduce in JIRA.</div>
+      </div>
+      <div class="workflow-step reveal">
+        <div class="workflow-num">06</div>
+        <span class="workflow-icon">✅</span>
+        <div class="workflow-name">Regression & Sign-off</div>
+        <div class="workflow-desc">Re-test fixes, full regression run, and quality sign-off for release.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--bg)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
+      <div class="reveal">
+        <div class="section-label">Career Journey</div>
+        <h2 class="section-title">Experience <span>Timeline</span></h2>
+        <p class="section-desc">My professional journey in software quality assurance and testing.</p>
+        <div class="timeline" style="margin-top:3rem">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 – Present</div>
+            <div class="timeline-card">
+              <div class="timeline-role">Software QA Engineer</div>
+              <div class="timeline-company"><i class="fa-solid fa-building" style="color:var(--blue)"></i> Professional QA Work</div>
+              <ul class="timeline-items">
+                <li>Led testing efforts on 3+ enterprise web applications</li>
+                <li>Developed automated test suites using Playwright</li>
+                <li>Collaborated with cross-functional development teams</li>
+                <li>Maintained test documentation and defect reports</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022 – 2023</div>
+            <div class="timeline-card">
+              <div class="timeline-role">QA Engineer Intern</div>
+              <div class="timeline-company"><i class="fa-solid fa-graduation-cap" style="color:var(--purple2)"></i> Internship Program</div>
+              <ul class="timeline-items">
+                <li>Hands-on testing of BNCC and IUMS systems</li>
+                <li>Wrote 200+ test cases across multiple modules</li>
+                <li>Learned Selenium automation under mentorship</li>
+                <li>Reported 100+ bugs with detailed reproduction steps</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2019 – 2022</div>
+            <div class="timeline-card">
+              <div class="timeline-role">Computer Science Student</div>
+              <div class="timeline-company"><i class="fa-solid fa-university" style="color:var(--cyan)"></i> University Education</div>
+              <ul class="timeline-items">
+                <li>Bachelor's degree in Computer Science</li>
+                <li>Self-studied QA methodologies and tools</li>
+                <li>Completed Playwright and Selenium courses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="section-label">GitHub Showcase</div>
+        <h2 class="section-title">Open Source <span>Work</span></h2>
+        <p class="section-desc">Automation frameworks and testing projects shared publicly on GitHub.</p>
+        <div style="margin-top:2rem;display:flex;flex-direction:column;gap:1rem">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;transition:all .3s;cursor:pointer" onmouseover="this.style.borderColor='var(--border2)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem">
+              <span style="font-weight:600;font-size:.95rem"><i class="fa-brands fa-github" style="color:var(--text2);margin-right:.5rem"></i>playwright-automation-suite</span>
+              <span style="font-family:var(--mono);font-size:.72rem;color:var(--green)">⭐ Public</span>
+            </div>
+            <p style="color:var(--text2);font-size:.82rem;margin-bottom:.75rem">End-to-end test automation framework using Playwright with TypeScript, POM pattern, and CI/CD integration.</p>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap"><span class="p-tag">TypeScript</span><span class="p-tag">Playwright</span><span class="p-tag">GitHub Actions</span></div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;transition:all .3s;cursor:pointer" onmouseover="this.style.borderColor='var(--border2)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem">
+              <span style="font-weight:600;font-size:.95rem"><i class="fa-brands fa-github" style="color:var(--text2);margin-right:.5rem"></i>selenium-webdriver-java</span>
+              <span style="font-family:var(--mono);font-size:.72rem;color:var(--green)">⭐ Public</span>
+            </div>
+            <p style="color:var(--text2);font-size:.82rem;margin-bottom:.75rem">Selenium automation framework with Java, TestNG, and Extent Reports for web application testing.</p>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap"><span class="p-tag">Java</span><span class="p-tag">Selenium</span><span class="p-tag">TestNG</span></div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem;transition:all .3s;cursor:pointer" onmouseover="this.style.borderColor='var(--border2)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem">
+              <span style="font-weight:600;font-size:.95rem"><i class="fa-brands fa-github" style="color:var(--text2);margin-right:.5rem"></i>api-testing-postman-collection</span>
+              <span style="font-family:var(--mono);font-size:.72rem;color:var(--green)">⭐ Public</span>
+            </div>
+            <p style="color:var(--text2);font-size:.82rem;margin-bottom:.75rem">Postman collection with Newman for automated API testing, including environment configs and test scripts.</p>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap"><span class="p-tag">Postman</span><span class="p-tag">Newman</span><span class="p-tag">API</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section id="services" style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">My <span>Services</span></h2>
+      <p class="section-desc">Comprehensive software testing services to ensure your product ships with confidence and quality.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon" style="background:rgba(79,142,247,.15);color:var(--blue)"><i class="fa-solid fa-clipboard-check"></i></div>
+        <div class="service-title">Manual Testing</div>
+        <div class="service-desc">Thorough manual testing covering functional, regression, smoke, and exploratory testing for web and mobile applications.</div>
+        <ul class="service-list">
+          <li>Test case writing & execution</li>
+          <li>Regression & smoke testing</li>
+          <li>Exploratory testing</li>
+          <li>UAT coordination</li>
+          <li>Cross-browser testing</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon" style="background:rgba(139,92,246,.15);color:var(--purple)"><i class="fa-solid fa-robot"></i></div>
+        <div class="service-title">Automation Testing</div>
+        <div class="service-desc">Building scalable, maintainable test automation frameworks using Playwright and Selenium with CI/CD integration.</div>
+        <ul class="service-list">
+          <li>Playwright E2E automation</li>
+          <li>Selenium WebDriver scripts</li>
+          <li>Page Object Model design</li>
+          <li>CI/CD pipeline integration</li>
+          <li>Test report generation</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon" style="background:rgba(6,182,212,.15);color:var(--cyan)"><i class="fa-solid fa-plug-circle-check"></i></div>
+        <div class="service-title">API Testing</div>
+        <div class="service-desc">Comprehensive API validation including functional testing, authentication, and automated API regression suites.</div>
+        <ul class="service-list">
+          <li>REST API validation</li>
+          <li>Authentication flow testing</li>
+          <li>Response schema checks</li>
+          <li>Postman collection setup</li>
+          <li>Automated API regression</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon" style="background:rgba(245,158,11,.15);color:#f59e0b"><i class="fa-solid fa-gauge-high"></i></div>
+        <div class="service-title">Performance Testing</div>
+        <div class="service-desc">Load, stress, and scalability testing using JMeter to ensure your application performs under real-world conditions.</div>
+        <ul class="service-list">
+          <li>Load testing with JMeter</li>
+          <li>Stress & spike testing</li>
+          <li>Performance metrics analysis</li>
+          <li>Bottleneck identification</li>
+          <li>Test result reporting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="section-label">Learning & Growth</div>
+      <h2 class="section-title">Certifications & <span>Training</span></h2>
+      <p class="section-desc">Continuously upskilling in the latest QA tools, frameworks, and testing methodologies.</p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:rgba(139,92,246,.15);color:var(--purple)"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="cert-body">
+          <div class="cert-title">Playwright Automation Testing</div>
+          <div class="cert-issuer">Udemy / Online Course · 2023</div>
+          <span class="cert-badge">✓ Completed</span>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:rgba(6,182,212,.15);color:var(--cyan)"><i class="fa-solid fa-spider"></i></div>
+        <div class="cert-body">
+          <div class="cert-title">Selenium WebDriver with python</div>
+          <div class="cert-issuer">Udemy · 2022</div>
+          <span class="cert-badge">✓ Completed</span>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:rgba(239,68,68,.15);color:#ef4444"><i class="fa-solid fa-gauge"></i></div>
+        <div class="cert-body">
+          <div class="cert-title">JMeter Performance Testing</div>
+          <div class="cert-issuer">LinkedIn Learning · 2023</div>
+          <span class="cert-badge">✓ Completed</span>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:rgba(79,142,247,.15);color:var(--blue)"><i class="fa-solid fa-vials"></i></div>
+        <div class="cert-body">
+          <div class="cert-title">Software Testing Fundamentals</div>
+          <div class="cert-issuer">ISTQB Foundation Level · 2022</div>
+          <span class="cert-badge">✓ Completed</span>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:rgba(245,158,11,.15);color:#f59e0b"><i class="fa-solid fa-bolt"></i></div>
+        <div class="cert-body">
+          <div class="cert-title">API Testing with Postman</div>
+          <div class="cert-issuer">Postman Academy · 2023</div>
+          <span class="cert-badge">✓ Completed</span>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:rgba(16,185,129,.15);color:var(--green)"><i class="fa-solid fa-database"></i></div>
+        <div class="cert-body">
+          <div class="cert-title">SQL for Testers</div>
+          <div class="cert-issuer">Online Course · 2022</div>
+          <span class="cert-badge">✓ Completed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--bg2)">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="section-label">Social Proof</div>
+      <h2 class="section-title">What People <span>Say</span></h2>
+      <p class="section-desc">Feedback from colleagues and supervisors I've worked with on real projects.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="quote-mark">"</div>
+        <div class="testimonial-text">Mehedi's attention to detail in test case writing is exceptional. He consistently caught edge cases that our dev team had overlooked, and his bug reports were always clear and reproducible.</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">AH</div>
+          <div><div class="author-name">Ahmed Hossain</div><div class="author-role">Senior Developer · IUMS Project</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="quote-mark">"</div>
+        <div class="testimonial-text">Working with Rabbi on the BNCC system was a pleasure. His Playwright automation suite reduced our regression testing time by 60% and improved our release confidence significantly.</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">RF</div>
+          <div><div class="author-name">Rahim Farhan</div><div class="author-role">Project Manager · BNCC System</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="quote-mark">"</div>
+        <div class="testimonial-text">As an intern, Mehedi demonstrated strong QA skills and a quick learning ability. He effectively understood complex business requirements and translated them into detailed and well-structured test cases, showing professionalism beyond his experience level.</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div><div class="author-name">Salma Mustafa</div><div class="author-role">QA Lead · Internship Supervisor</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Let's <span>Connect</span></h2>
+      <p class="section-desc">Ready to discuss your QA needs? I'm open to full-time roles, freelance projects, and collaboration opportunities.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a href="mailto:mehedihasan.rabbi@email.com" class="contact-item">
+          <div class="contact-item-icon" style="background:rgba(79,142,247,.15);color:var(--blue)"><i class="fa-solid fa-envelope"></i></div>
+          <div><div class="contact-item-label">Email</div><div class="contact-item-val">mehedihasan.rabbi@email.com</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/mehedi-hasan-rabbi-109192399/" target="_blank" class="contact-item">
+          <div class="contact-item-icon" style="background:rgba(10,102,194,.15);color:#0a66c2"><i class="fa-brands fa-linkedin"></i></div>
+          <div><div class="contact-item-label">LinkedIn</div><div class="contact-item-val">linkedin.com/in/mehedi-hasan-rabbi</div></div>
+        </a>
+        <a href="https://github.com/mehedihasen2025" target="_blank" class="contact-item">
+          <div class="contact-item-icon" style="background:rgba(255,255,255,.08);color:var(--text)"><i class="fa-brands fa-github"></i></div>
+          <div><div class="contact-item-label">GitHub</div><div class="contact-item-val">github.com/mehedi-hasan-rabbi</div></div>
+        </a>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem">
+          <div style="font-size:.85rem;font-weight:600;margin-bottom:1rem">Availability Status</div>
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem">
+            <div style="width:10px;height:10px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;flex-shrink:0"></div>
+            <span style="font-size:.88rem;color:var(--text2)">Available for full-time roles</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem">
+            <div style="width:10px;height:10px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;flex-shrink:0"></div>
+            <span style="font-size:.88rem;color:var(--text2)">Open to freelance projects</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.75rem">
+            <div style="width:10px;height:10px;border-radius:50%;background:var(--blue);flex-shrink:0"></div>
+            <span style="font-size:.88rem;color:var(--text2)">Based in Bangladesh · Remote OK</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:1.75rem">Send a Message</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="John"/></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe"/></div>
+        </div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@company.com"/></div>
+        <div class="form-group"><label>Subject</label><input type="text" placeholder="QA Engineer Opportunity"/></div>
+        <div class="form-group"><label>Message</label><textarea rows="5" placeholder="Tell me about your project or opportunity..."></textarea></div>
+        <button class="btn-submit" onclick="handleSubmit()"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">© 2025 <span>Mehedi Hasan Rabbi</span> · Software QA Engineer · Built with passion for quality</div>
+    <div style="display:flex;align-items:center;gap:1rem">
+      <div style="display:flex;gap:.75rem">
+        <a href="https://linkedin.com" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i></a>
+        <a href="mehedi.hasan.cse.2025@gmail.com" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <a href="#hero" class="back-top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// LOADER
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.getElementById('loader').classList.add('hidden');
+  },1800);
+});
+
+// NAV SCROLL
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);
+});
+
+// MOBILE NAV
+function toggleMobile(){
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// TYPING EFFECT
+const roles=['Software QA Engineer','Manual Testing Expert','Automation Tester','Playwright Specialist','API Testing Engineer'];
+let ri=0,ci=0,deleting=false;
+function type(){
+  const el=document.getElementById('typed-text');
+  if(!el)return;
+  const cur=roles[ri];
+  if(!deleting){
+    el.textContent=cur.slice(0,ci+1);ci++;
+    if(ci===cur.length){deleting=true;setTimeout(type,2000);return;}
+  }else{
+    el.textContent=cur.slice(0,ci-1);ci--;
+    if(ci===0){deleting=false;ri=(ri+1)%roles.length;}
+  }
+  setTimeout(type,deleting?50:80);
+}
+setTimeout(type,500);
+
+// SKILL FILTER
+function filterSkills(cat,btn){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.skill-card').forEach(c=>{
+    const show=cat==='all'||c.dataset.cat===cat;
+    c.style.display=show?'block':'none';
+  });
+}
+
+// REVEAL ON SCROLL
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      // Animate skill bars
+      const bar=e.target.querySelector('.skill-bar');
+      if(bar){
+        const w=bar.dataset.width;
+        setTimeout(()=>{bar.style.width=w+'%';},200);
+      }
+    }
+  });
+},{threshold:0.12,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// CONTACT FORM
+function handleSubmit(){
+  const btn=document.querySelector('.btn-submit');
+  btn.innerHTML='<i class="fa-solid fa-check"></i> Message Sent!';
+  btn.style.background='linear-gradient(135deg,#10b981,#059669)';
+  setTimeout(()=>{
+    btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Send Message';
+    btn.style.background='';
+  },3000);
+}
+</script>
+</body>
+</html>
